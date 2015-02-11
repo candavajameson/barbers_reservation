@@ -6,6 +6,6 @@ class User < ActiveRecord::Base
 
   ROLES = %i[admin barber customer]
 
-  has_many :reservations, class_name: "Reservation", foreign_key: "user_id"
-  has_many :appointments, class_name: "Reservation", foreign_key: "barber_id" 
+  has_many :reservations, class_name: "Reservation"
+  has_many :appointments, class_name: "Reservation"
 end
