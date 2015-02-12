@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :admin do 
     resources :users
     resources :customers
+    resources :services
   end
 
   namespace :customers do

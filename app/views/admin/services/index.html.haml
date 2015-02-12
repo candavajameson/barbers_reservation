@@ -1,0 +1,23 @@
+%h1 Services
+%hr
+
+.container
+	.pull-right
+		= link_to "New Service", new_admin_service_path, class: 'btn btn-success'
+
+%table.table.table-striped
+	%thead
+		%th Name
+		%th Price
+		%th Points
+		%th 
+	%tbody
+		- @services.each |service|
+			%tr
+				%td= service.name
+				%td= service.price
+				%td= service.points
+				%td= link_to 'Edit', edit_admin_service_path(service), class: 'btn btn-success'
+
+= paginate @services
+= page_entries_info @services
